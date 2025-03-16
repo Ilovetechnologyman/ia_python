@@ -1,0 +1,2 @@
+On  remarque que le caractere aléatoire n'optimise pas l'algorithme de parcours , au lieu de faire appel 
+a rd, on devrait calculer la distance entre l'agent et la récompense .
