@@ -8,7 +8,7 @@ from collections import deque
 # Random Maze
 
 m = Maze()
-m.generator = Prims (50, 50) #TODO: Adjust size if needed
+m.generator = Prims (10, 10) #TODO: Adjust size if needed
 m.generate()
 maze_grid = m.grid
 
@@ -63,10 +63,13 @@ def dfs(maze, start, end):
         current = stack.pop()
         if current in visited:
             continue
+
         visited.add(current)
         path.append(current)
+
         if current == end:
             return path
+
         x, y = current
         for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
             nx, ny = x + dx, y + dy
@@ -105,7 +108,7 @@ def bfs(maze, start, end):
 
 # Définir les points de départ et d'arrivée
 start = (1, 1)
-end = (11, 9)
+end = (19, 19)
 
 
 start_dfs = time.time()
